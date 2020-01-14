@@ -1,0 +1,4 @@
+class Attributes {
+public:
+  Attributes() {}
+};
