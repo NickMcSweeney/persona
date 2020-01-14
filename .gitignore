@@ -32,4 +32,4 @@
 *.out
 *.app
 
-build/CMakeFiles
+build/CMakeFiles/*
