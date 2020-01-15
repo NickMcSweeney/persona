@@ -10,7 +10,9 @@ project( persona )
 include_directories( include src )
 
 set(SOURCES src/main.cpp
-    src/core.cpp)
+    src/core.cpp
+    src/attributes.cpp
+    src/attribute.cpp)
 
 # target
 add_executable( persona ${SOURCES})

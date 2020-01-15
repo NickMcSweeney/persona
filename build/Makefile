@@ -123,6 +123,60 @@ persona/fast:
 	$(MAKE) -f CMakeFiles/persona.dir/build.make CMakeFiles/persona.dir/build
 .PHONY : persona/fast
 
+src/attribute.o: src/attribute.cpp.o
+
+.PHONY : src/attribute.o
+
+# target to build an object file
+src/attribute.cpp.o:
+	$(MAKE) -f CMakeFiles/persona.dir/build.make CMakeFiles/persona.dir/src/attribute.cpp.o
+.PHONY : src/attribute.cpp.o
+
+src/attribute.i: src/attribute.cpp.i
+
+.PHONY : src/attribute.i
+
+# target to preprocess a source file
+src/attribute.cpp.i:
+	$(MAKE) -f CMakeFiles/persona.dir/build.make CMakeFiles/persona.dir/src/attribute.cpp.i
+.PHONY : src/attribute.cpp.i
+
+src/attribute.s: src/attribute.cpp.s
+
+.PHONY : src/attribute.s
+
+# target to generate assembly for a file
+src/attribute.cpp.s:
+	$(MAKE) -f CMakeFiles/persona.dir/build.make CMakeFiles/persona.dir/src/attribute.cpp.s
+.PHONY : src/attribute.cpp.s
+
+src/attributes.o: src/attributes.cpp.o
+
+.PHONY : src/attributes.o
+
+# target to build an object file
+src/attributes.cpp.o:
+	$(MAKE) -f CMakeFiles/persona.dir/build.make CMakeFiles/persona.dir/src/attributes.cpp.o
+.PHONY : src/attributes.cpp.o
+
+src/attributes.i: src/attributes.cpp.i
+
+.PHONY : src/attributes.i
+
+# target to preprocess a source file
+src/attributes.cpp.i:
+	$(MAKE) -f CMakeFiles/persona.dir/build.make CMakeFiles/persona.dir/src/attributes.cpp.i
+.PHONY : src/attributes.cpp.i
+
+src/attributes.s: src/attributes.cpp.s
+
+.PHONY : src/attributes.s
+
+# target to generate assembly for a file
+src/attributes.cpp.s:
+	$(MAKE) -f CMakeFiles/persona.dir/build.make CMakeFiles/persona.dir/src/attributes.cpp.s
+.PHONY : src/attributes.cpp.s
+
 src/core.o: src/core.cpp.o
 
 .PHONY : src/core.o
@@ -186,6 +240,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... persona"
 	@echo "... edit_cache"
+	@echo "... src/attribute.o"
+	@echo "... src/attribute.i"
+	@echo "... src/attribute.s"
+	@echo "... src/attributes.o"
+	@echo "... src/attributes.i"
+	@echo "... src/attributes.s"
 	@echo "... src/core.o"
 	@echo "... src/core.i"
 	@echo "... src/core.s"
