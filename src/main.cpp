@@ -13,35 +13,33 @@ private:
   Core core_;
   Attributes attributes_;
 
-  // Create a new character
-
-  // Load an old character
 public:
   // Constructor
-  Persona() {
-    this->core_ = Core();
-    this->attributes_ = Attributes();
-  }
+  Persona() { this->attributes_.init(); }
 
   void init() {}
 
-  string name() {
-    this->core_.setName("greg");
-    return this->core_.getName();
-  }
-
   void run() {
     // do things
+    int value = this->attributes_.attribute_name("intelectual");
+    cout << "intelectual: " << value << "\n";
+
+    this->attributes_.set_key(0, 10);
+    cout << "set physical\n";
+
+    int value1 = this->attributes_.attribute_key(0);
+    int value2 = this->attributes_.attribute_name("emotional");
+    cout << "physical: " << value1;
+    cout << "emotional: " << value2;
   }
 };
 
 int main() {
   // welcome
-  cout << "starting up persona...";
+  cout << "starting up persona...\n";
   Persona character = Persona();
-  character.init();
-  string n = character.name();
-  cout << "hi my name is: " << n << "\n";
+  // character.init();
+  cout << "character initialized!\n";
 
   character.run();
 }

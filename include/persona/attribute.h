@@ -1,11 +1,18 @@
 #include <string>
 
+using namespace std;
+
 class Attribute {
 public:
-  Attribute();
+  Attribute(string name, int key);
+
+  int key_;
+
   int getValue();
+  string getName();
+  void setValue(int value);
 
 private:
-  std::string name;
-  int value;
+  string name_;
+  int value_;
 };

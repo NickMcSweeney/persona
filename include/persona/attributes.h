@@ -1,4 +1,5 @@
 #include <persona/attribute.h>
+#include <stdexcept>
 #include <string>
 
 using namespace std;
@@ -9,54 +10,7 @@ private:
   int available_points_;
   int total_points_;
 
-  // CORE
-  Attribute physical_;
-  Attribute emotional_;
-  Attribute intelectual_;
-  // INTELECTUAL
-  Attribute intelligence_;
-  Attribute reasoning_;
-  Attribute logic_;
-  Attribute intuition_;
-  Attribute perception_;
-  Attribute guile_;
-  Attribute improvization_;
-  Attribute organization_;
-  Attribute creativity_;
-  Attribute focus_;
-  Attribute percision_;
-  Attribute decisiveness_;
-  Attribute alertness_;
-  // EMOTIONAL
-  Attribute neuroticism_;
-  Attribute control_;
-  Attribute extraversion_;
-  Attribute independence_;
-  Attribute idealism_;
-  Attribute happiness_;
-  Attribute hope_;
-  Attribute sadness_;
-  Attribute anger_;
-  Attribute fear_;
-  Attribute shame_;
-  Attribute curiosity_;
-  Attribute compassion_;
-  // PHYSICAL
-  Attribute agility_;
-  Attribute endurance_;
-  Attribute reflexes_;
-  Attribute speed_;
-  Attribute power_;
-  Attribute strength_;
-  Attribute constitution_;
-  Attribute attractiveness_;
-  Attribute physique_;
-  Attribute grace_;
-  Attribute coordination_;
-  Attribute quickness_;
-  Attribute endowment_;
-
-  std::string elements_[42] = {
+  string elements_[42] = {
       "physical",       "emotional",     "intelectual",  "intelligence",
       "reasoning",      "logic",         "intuition",    "perception",
       "guile",          "improvization", "organization", "creativity",
@@ -69,13 +23,22 @@ private:
       "attractiveness", "physique",      "grace",        "coordination",
       "quickness",      "endowment"};
 
+  Attribute **table_;
+  int HashFunction(int key);
+  void Insert(int key, string name);
+  Attribute *SearchKey(int key);
+  Attribute *SearchName(string name);
+
 public:
   Attributes();
   ~Attributes();
 
-  int getAttributeValues();
-  string getAttributeNames();
+  int values();
+  string names();
 
-  void setAttribute(string name, int val);
-  int lookupAttribute(string name);
+  void init();
+  void set_name(string name, int val);
+  void set_key(int key, int val);
+  int attribute_name(string name);
+  int attribute_key(int key);
 };
